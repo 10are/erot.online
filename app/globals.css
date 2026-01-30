@@ -1,36 +1,35 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
+::selection {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -46,37 +45,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
-}
-
-/* Selection */
-::selection {
-  background: #1d4ed8;
-  color: white;
-}
-
-/* Focus styles for accessibility */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #1d4ed8;
-  outline-offset: 2px;
-}
-
-/* Smooth transitions */
-a,
-button {
-  transition: all 0.2s ease-in-out;
-}
-
-/* Typography improvements */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
-
-p {
-  text-wrap: pretty;
 }

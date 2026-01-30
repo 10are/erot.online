@@ -326,11 +326,15 @@ export default function Home() {
               Eğitmenler
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8">
+              <article className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">TK</span>
-                  </div>
+                  <Image
+                    src="/egitmen_tevhide_kargin.png"
+                    alt="Prof. Dr. Tevhide Kargın - EROT Eğitmeni"
+                    width={80}
+                    height={80}
+                    className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-2 border-blue-200"
+                  />
                   <div>
                     <h4 className="text-xl font-bold text-slate-900">
                       Prof. Dr. Tevhide KARGIN
@@ -349,13 +353,17 @@ export default function Home() {
                   güçlükleri, erken okuryazarlık ve eğitsel değerlendirme
                   alanlarında uzmanlaşmıştır.
                 </p>
-              </div>
+              </article>
 
-              <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8">
+              <article className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">BG</span>
-                  </div>
+                  <Image
+                    src="/egitmen_birkan_guldenoglu.png"
+                    alt="Prof. Dr. İ. Birkan Güldenoğlu - EROT Eğitmeni"
+                    width={80}
+                    height={80}
+                    className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-2 border-blue-200"
+                  />
                   <div>
                     <h4 className="text-xl font-bold text-slate-900">
                       Prof. Dr. İ. Birkan GÜLDENOĞLU
@@ -373,7 +381,7 @@ export default function Home() {
                   akademisyenlerinden biridir. Erken çocukluk dönemi gelişimi ve
                   okuryazarlık becerileri üzerine çalışmaktadır.
                 </p>
-              </div>
+              </article>
             </div>
           </div>
         </div>
