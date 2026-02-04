@@ -26,13 +26,17 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden md:flex items-center gap-8">
-              {["Hakkında", "Eğitim", "Dernek", "Başvuru"].map((item, i) => (
+              {[
+                { label: "Ev Okulu Derneği", href: "#dernek" },
+                { label: "Eğitim Hakkında", href: "#egitim" },
+                { label: "Başvuru", href: "#basvuru" },
+              ].map((item, i) => (
                 <a
                   key={i}
-                  href={`#${item.toLowerCase().replace("ı", "i")}`}
+                  href={item.href}
                   className="text-slate-600 hover:text-indigo-600 transition-colors relative group font-medium"
                 >
-                  {item}
+                  {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:w-full transition-all duration-300" />
                 </a>
               ))}
@@ -399,6 +403,77 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Eğitim Materyalleri */}
+          <div className="mt-20 p-10 rounded-3xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-4">
+                Materyaller
+              </span>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Eğitim Materyalleri</h3>
+              <p className="text-slate-600">EROT uygulayıcı eğitimi için gerekli materyalleri edinin</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <a
+                href="https://www.evokulushop.com/erot-erken-okuryazarlik-testi-uygulayici-egitimi-materyali/kitabi-cantasiz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover-card group p-8 rounded-2xl bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-xl transition-all"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                      EROT Uygulayıcı Eğitimi Materyali/Kitabı (Çantasız)
+                    </h4>
+                    <p className="text-slate-600 text-sm mb-4">
+                      Erken Okuryazarlık Testi uygulayıcı eğitimi materyali
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-indigo-600 font-medium text-sm">
+                      Satın almak için tıklayınız
+                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.evokulushop.com/erot-erken-okuryazarlik-testi-uygulayici-egitimi-materyali/kitabi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover-card group p-8 rounded-2xl bg-white border border-slate-200 hover:border-purple-300 hover:shadow-xl transition-all"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-fuchsia-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
+                      EROT Uygulayıcı Eğitimi Materyali/Kitabı
+                    </h4>
+                    <p className="text-slate-600 text-sm mb-4">
+                      Erken Okuryazarlık Testi uygulayıcı eğitimi materyali (çantalı set)
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-purple-600 font-medium text-sm">
+                      Satın almak için tıklayınız
+                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
           {/* CTA */}
           <div className="text-center mt-16">
             <a
@@ -429,6 +504,17 @@ export default function Home() {
             <p className="text-xl gradient-text font-semibold max-w-3xl mx-auto">
               Türkiye'deki her bir evi eğitim ve mutluluk yuvasına dönüştürmektir.
             </p>
+          </div>
+
+          {/* Ekip Fotoğrafı */}
+          <div className="mb-20 rounded-3xl overflow-hidden shadow-2xl">
+            <Image
+              src="/ekibimiz.png"
+              alt="Ev Okulu Derneği Ekibi"
+              width={1200}
+              height={600}
+              className="w-full h-auto object-cover"
+            />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 mb-20">
@@ -643,10 +729,14 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-white mb-6">Hızlı Bağlantılar</h4>
               <ul className="space-y-3">
-                {["Hakkında", "Eğitim", "Dernek", "Başvuru"].map((item, i) => (
+                {[
+                  { label: "Ev Okulu Derneği", href: "#dernek" },
+                  { label: "Eğitim Hakkında", href: "#egitim" },
+                  { label: "Başvuru", href: "#basvuru" },
+                ].map((item, i) => (
                   <li key={i}>
-                    <a href={`#${item.toLowerCase().replace("ı", "i")}`} className="text-slate-400 hover:text-white transition-colors">
-                      {item === "Hakkında" ? "EROT Hakkında" : item === "Eğitim" ? "Eğitim Programı" : item === "Dernek" ? "Ev Okulu Derneği" : item}
+                    <a href={item.href} className="text-slate-400 hover:text-white transition-colors">
+                      {item.label}
                     </a>
                   </li>
                 ))}
